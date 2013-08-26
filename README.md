@@ -3,6 +3,8 @@ bootstrap-select
 
 A custom select / multiselect for @twitter bootstrap using button dropdown, designed to behave like regular Bootstrap selects;
 
+This fork is an attempt to port to Bootstrap 3.
+
 ## Demo and Documentation
 
 See an  example [here](http://silviomoreto.github.com/bootstrap-select/).
