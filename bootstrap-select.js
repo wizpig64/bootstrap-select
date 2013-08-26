@@ -77,7 +77,7 @@
             //If we are multiple, then add the show-tick class by default            
             var multiple = this.multiple ? ' show-tick' : '';
             var drop =
-                "<div class='btn-group bootstrap-select" + multiple + "'>" +
+                "<div class='btn-group navbar-btn bootstrap-select" + multiple + "'>" +
                     "<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown'>" +
                         "<div class='filter-option pull-left'></div>&nbsp;" +
                         "<div class='caret'></div>" +
@@ -123,7 +123,7 @@
                 var inline = $this.attr("style") || '';
                 var text =  $this.data('content') ? $this.data('content') : $this.html();
                 var subtext = $this.data('subtext') !== undefined ? '<small class="muted">' + $this.data('subtext') + '</small>' : '';
-                var icon = $this.data('icon') !== undefined ? '<i class="glyphicon '+$this.data('icon')+'"></i> ' : '';
+                var icon = $this.data('icon') !== undefined ? '<span class="glyphicon '+$this.data('icon')+'"></span>' : '';
                 if (icon !== '' && ($this.is(':disabled') || $this.parent().is(':disabled'))) {
                     icon = '<span>'+icon+'</span>';
                 }
@@ -140,7 +140,7 @@
                         //Get the opt group label
                         var label = $this.parent().attr('label');
                         var labelSubtext = $this.parent().data('subtext') !== undefined ? '<small class="muted">'+$this.parent().data('subtext')+'</small>' : '';
-                        var labelIcon = $this.parent().data('icon') ? '<i class="'+$this.parent().data('icon')+'"></i> ' : '';
+                        var labelIcon = $this.parent().data('icon') ? '<span class="'+$this.parent().data('icon')+'"></span> ' : '';
                         label = labelIcon + '<span class="text">' + label + labelSubtext + '</span>';
 
                         if ($this[0].index != 0) {
@@ -181,7 +181,6 @@
         createA: function(text, classes, inline) {
             return '<a tabindex="0" class="'+classes+'" style="'+inline+'">' +
                  text +
-                 '<i class="glyphicon glyphicon-ok icon-ok check-mark"></i>' +
                  '</a>';
         },
 
@@ -196,7 +195,7 @@
 
             var selectedItems = this.$element.find('option:selected').map(function(index,value) {
                 var $this = $(this);
-                var icon = $this.data('icon') && _this.options.showIcon ? '<i class="glyphicon ' + $this.data('icon') + '"></i> ' : '';
+                var icon = $this.data('icon') && _this.options.showIcon ? '<span class="glyphicon ' + $this.data('icon') + '"></span>' : '';
                 var subtext;
                 if (_this.options.showSubtext && $this.attr('data-subtext') && !_this.multiple) {
                     subtext = ' <small class="muted">'+$this.data('subtext') +'</small>';
