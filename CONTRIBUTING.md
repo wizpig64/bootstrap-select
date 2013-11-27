@@ -36,10 +36,12 @@ Guidelines for bug reports:
 2. **Check if the issue has been fixed.** Try to reproduce it using the
    latest `master` or development branch in the repository.
 
-3. **Create an isolated and reproducible test case.** Create a [reduced test
+3. **Provide environment details.** Provide your operating system, browser(s), jQuery version, Bootstrap version, and bootstrap-select version.
+
+4. **Create an isolated and reproducible test case.** Create a [reduced test
    case](http://css-tricks.com/6263-reduced-test-cases/).
 
-4. **Include a live example.** Make use of jsFiddle or jsBin to share your isolated test cases.
+5. **Include a live example.** Make use of jsFiddle or jsBin to share your isolated test cases.
 
 A good bug report shouldn't leave others needing to chase you up for more
 information. Please try to be as detailed as possible in your report. What is
@@ -73,3 +75,13 @@ Feature requests are welcome. But take a moment to find out whether your idea
 fits with the scope and aims of the project. It's up to *you* to make a strong
 case to convince the project's developers of the merits of this feature. Please
 provide as much detail and context as possible.
+
+## Pull Request Guidelines
+
+* To instanciate a context or use it, use the variable **that** instead of **_this**.
+* Submit your CLA, if you haven't.
+* Please check to make sure that there aren't existing pull requests attempting to address the issue mentioned. We also recommend checking for issues related to the issue on the tracker, as a team member may be working on the issue in a branch or fork.
+* Non-trivial changes should be discussed in an issue first
+* If possible, use JSlint or JSHint to validate it
+* If possible, add relevant tests to cover the change
+* Write a convincing description of your PR and why we should land it
